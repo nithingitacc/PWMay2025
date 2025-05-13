@@ -53,7 +53,7 @@
  */
 
 /*
-// 2. xpath
+// 2. XPATH
 
 //  / - Absolute xpath - /html/body/div/div/section/section/h2
 // // - Relative xpath - //*[@id='login']/h2
@@ -62,17 +62,18 @@
 
 //tagname or *[@attribute = 'value']
 
-1.// (//*[@attribute='value'])[1]
+1.// //*[@attribute='value']    OR (//*[@attribute='value'])[1]
 
 //*[@id='userEmail']
 
-2. (//tagname[@attribute='value'])[1]
+2. //tagname[@attribute='value']  OR (//tagname[@attribute='value'])[1]
 
 //input[@id='userEmail']
 
 3. // Parent to child
 
 //div[@class='form-group']/input[@id='userEmail']
+//div[@id='userName-wrapper']//input[@id='firstName']
 
 4. //label[@for='email']/following-sibling::input[@id='userEmail']
   //label[@for='username']/following-sibling::input
@@ -89,7 +90,7 @@
 // 6. //h2[text() = 'Test login']  -  //h5[text() = 'Student Registration Form']
 // 7. //h2[contains(text(), 'Test')]
 
-//Syntcx:
+//Syntax:
 // * or tagName[contains(text(), 'Registration')]
 
 
