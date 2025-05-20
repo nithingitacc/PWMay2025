@@ -43,6 +43,11 @@ test("Drop down developed uisng select tag", async ({page})=>{
 })
 
 test("Drop down developed using non select tag", async ({page})=>{
-   // await 
+   await page.goto("https://demoqa.com/select-menu")
+   await page.locator("#withOptGroup").click()
+   await page.locator("#react-select-2-option-2").click()
 
+   await page.locator("div.css-1hwfws3").last().click()
+   await page.locator("#react-select-4-option-1").click()
+   await page.getByText("Red").last().click()
 })
