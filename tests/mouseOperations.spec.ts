@@ -18,7 +18,7 @@ test("double click and right click validation", async ({page})=>{
 })
 
 
-test.only('Mouse over an element', async ({page})=>{
+test('Mouse over an element', async ({page})=>{
     await page.goto("https://www.spicejet.com/")
     // hover() - Hover over the matching element.
     await page.getByText("Add-ons", {exact: true}).first().hover()
@@ -31,5 +31,18 @@ test.only('Mouse over an element', async ({page})=>{
 // drop down 
 // Alert or pop-up handling
 // Window handling - 
+
+
+test.only("Drag and drop hanlding", async ({page})=>{
+    await page.goto("https://jqueryui.com/resources/demos/droppable/default.html")
+
+    const source = page.locator("div#draggable")
+    const target = page.locator("div#droppable")
+
+   // dragTo()
+
+   await source.dragTo(target)
+   await expect(page.getByText("Dropped!")).toBeVisible()
+})
 
 

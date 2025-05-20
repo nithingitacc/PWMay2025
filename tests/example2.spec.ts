@@ -42,7 +42,7 @@ test("Login validation using browser fixture", async ({browser})=>{
   await expect(page1.locator("h1.post-title")).toBeVisible()
 })
 
-test.only("Login validation using page fixture", async ({page})=>{
+test("Login validation using page fixture", async ({page})=>{
   await page.goto('https://practicetestautomation.com/practice-test-login/');
   await page.locator("#username").fill("student")
   await page.locator("#password").fill("Password123")
