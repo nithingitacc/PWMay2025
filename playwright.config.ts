@@ -21,6 +21,10 @@ export default defineConfig({
   workers: process.env.CI ? 1 : 10, // undefined means 8 test cases at a time
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
+  // timeout : 120000,
+  // expect :{
+  //   timeout: 20000
+  // },
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
@@ -52,7 +56,7 @@ export default defineConfig({
     //   use: { ...devices['Desktop Safari'] },
     // },
 
-    /* Test against mobile viewports. */
+    // /* Test against mobile viewports. */
     // {
     //   name: 'Mobile Chrome',
     //   use: { ...devices['Pixel 5'] },
@@ -62,7 +66,7 @@ export default defineConfig({
     //   use: { ...devices['iPhone 12'] },
     // },
 
-    /* Test against branded browsers. */
+    // /* Test against branded browsers. */
     // {
     //   name: 'Microsoft Edge',
     //   use: { ...devices['Desktop Edge'], channel: 'msedge' },

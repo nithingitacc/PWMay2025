@@ -8,7 +8,7 @@ test("Alerts handling", async ({page})=>{
     // on()
     // waitForEvent()
 
-    page.on('dialog', function (dialog) {
+    page.on('dialog', async function (dialog) {
         console.log(dialog.message()) // We are getting the text value from the alerts
         dialog.dismiss() // accept() will click on OK and dismiss() will click on CANCEL
     })
@@ -32,7 +32,7 @@ test("Prompt Alerts handling", async ({page})=>{
     await  page.goto("https://demoqa.com/alerts")
     const message = "Test"
    
-    page.on('dialog', function (dialog) {
+    page.on('dialog', function (dialog) {   
         console.log(dialog.message()) 
         dialog.accept(message) 
     })
