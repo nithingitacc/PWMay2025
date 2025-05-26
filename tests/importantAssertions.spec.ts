@@ -9,7 +9,9 @@ await expect(locator).toHaveValue()
 await expect(page).toHaveTitle()
 await expect(page).toHaveURL()
 
-await expect(locator).not.toBeChecked()
+await expect(locator).not.toBeVisible()
+await expect(locator).toBeHidden()
+
 
 */
 
