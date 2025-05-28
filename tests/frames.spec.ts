@@ -17,6 +17,7 @@ test("iframe handling", async ({page})=>{
     await framePage.getByText("All Access plan").first().click()
     await expect(framePage.locator("div.inner-box h1")).toContainText("All Access Subscription")
 
+
     await page.locator("#checkBoxOption1").check()
     await expect(page.locator("#checkBoxOption1")).toBeChecked()
 })

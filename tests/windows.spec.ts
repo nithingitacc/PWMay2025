@@ -12,9 +12,6 @@ test("Window handling", async ({page})=>{
 
   //  const newPage = await page1
     //    console.log(newPage);
-
-
-
     // Promise has a 3 stages: 1. pending, 2. success or accepted 3. rejected
 
     await newPage.getByText("Downloads").click()

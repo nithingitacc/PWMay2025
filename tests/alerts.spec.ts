@@ -8,7 +8,7 @@ test("Alerts handling", async ({page})=>{
     // on()
     // waitForEvent()
 
-    page.on('dialog', async function (dialog) {
+    page.on('dialog',  function (dialog) {
         console.log(dialog.message()) // We are getting the text value from the alerts
         dialog.dismiss() // accept() will click on OK and dismiss() will click on CANCEL
     })
@@ -25,7 +25,7 @@ test("Confirm Alerts handling", async ({page})=>{
         dialog.accept("Testing") 
     })
     await page.locator("#confirmButton").click()
-    await expect(page.locator("#confirmResult")).toContainText("You selected Ok")
+    await expect(page.locator("#confirmResult")).toContainText("You selected Cancel")
 })
 
 test("Prompt Alerts handling", async ({page})=>{

@@ -21,7 +21,7 @@ export default defineConfig({
   workers: process.env.CI ? 1 : 10, // undefined means 8 test cases at a time
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
-  // timeout : 120000,
+  //timeout : 120000,
   // expect :{
   //   timeout: 20000
   // },

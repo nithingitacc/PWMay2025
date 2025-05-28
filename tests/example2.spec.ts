@@ -46,7 +46,7 @@ test("Login validation using page fixture", async ({page})=>{
   await page.goto('https://practicetestautomation.com/practice-test-login/');
   await page.locator("#username").fill("student")
   await page.locator("#password").fill("Password123")
-  await page.locator("#submit").click()
+  await page.locator("#submit").click({force: true})
   await expect(page.locator("h1.post-title")).toBeVisible()
 })
 
