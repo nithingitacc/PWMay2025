@@ -9,4 +9,6 @@ test('Shadow dom element handling', async({page})=>{
     const bookName: string|null = await book.nth(0).textContent()
 
     console.log(bookName)
+    
+
 })
